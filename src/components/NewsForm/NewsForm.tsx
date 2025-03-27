@@ -14,7 +14,8 @@ export const NewsForm: FC<NewsFormProps> = ({ onAdd }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
-  const disabled = title === '' || content === '';
+  const disabledSubmit = title === '' || content === '';
+  const disabledClear = title === '' && content === '';
 
   const handleClear = () => {
     setTitle('');
@@ -52,8 +53,8 @@ export const NewsForm: FC<NewsFormProps> = ({ onAdd }) => {
           className={styles.newsForm__textarea}
         />
         <div className={styles.buttonBlock}>
-          <Button type="submit" disabled={disabled} title="Добавить" />
-          <Button onClick={handleClear} disabled={disabled} title="Очистить" />
+          <Button type="submit" disabled={disabledSubmit} title="Добавить" />
+          <Button onClick={handleClear} disabled={disabledClear} title="Очистить" />
         </div>
       </form>
     </div>
