@@ -1,0 +1,118 @@
+.newsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: calc(100vh - 360px);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &__emptyResult {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.newsItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #E7E8EE;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(255, 222, 117, 0.7);
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+.titleNews {
+  font-size: 1.5rem;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.infoNews {
+  font-size: 1rem;
+  color: white;
+  overflow: hidden;
+}
+
+.buttonBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.buttonBlockModal{
+  display: flex;
+  gap: 20px;
+}
+
+.titleModal {
+  color: white;
+}
+
+.inputModal, .textareaModal {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #E7E8EE;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px 4px rgba(95, 98, 118, 0.08);
+  color: white;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: #FFDE75;
+    box-shadow: 0 0 12px rgba(255, 222, 117, 0.7);
+    transform: scale(1.02);
+  }
+
+  &:hover {
+    border-color: #FFDE75;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  &::placeholder {
+    color: rgba(255, 222, 117, 0.6);
+    font-style: italic;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:focus::placeholder {
+    color: rgba(255, 222, 117, 0.3);
+  }
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+.buttonCardBlock{
+  display: flex;
+  height: 100%;
+  gap: 20px;
+}
+
+.iconButton{
+  width: 32px;
+  height: 32px;
+  background-color: #ffde75;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
