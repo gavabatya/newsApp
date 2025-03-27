@@ -4,6 +4,7 @@ import svgr from 'vite-plugin-svgr';
 import path from 'path';
 
 export default defineConfig({
+  base: '/newsApp/',
   // @ts-ignore
   plugins: [react(),  svgr({ exportAsDefault: true, include: "**/*.svg" })],
   resolve: {

@@ -3,11 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://gavabatya.github.io/newsApp",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages-clean && yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.69.0",
@@ -39,6 +41,7 @@
     "globals": "^15.15.0",
     "prettier": "^3.3.2",
     "typescript": "~5.7.2",
+    "gh-pages": "^6.3.0",
     "vite": "^6.2.0"
   }
 }
